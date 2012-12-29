@@ -1,0 +1,7 @@
+<Alloy>
+	 <Collection src="config"/>	
+
+	<Window class="container">
+		<Label id="lblTest"></Label>
+	</Window>
+</Alloy>

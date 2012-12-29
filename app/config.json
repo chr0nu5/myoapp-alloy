@@ -1,0 +1,11 @@
+{
+	"global": {
+		"oeventsUrl": "http://www.guedels.ch/yannis/mysql2json/myoapp.php?table=competitions&last_update={last_update}&query={query}"
+	}, 
+	"env:development": {}, 
+	"env:test": {}, 
+	"env:production": {}, 
+	"os:ios": {}, 
+	"os:android": {}, 
+	"dependencies": {}
+}
