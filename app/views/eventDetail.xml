@@ -1,0 +1,40 @@
+<Alloy>
+	<Window layout="vertical">
+		<TableView id="tb">
+			<TableViewSection headerTitle="Informationen">
+				<TableViewRow> 
+					<Label class="event-detail-label">Name</Label>
+					<Label text="{name}" class="event-detail-value"></Label>
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="event-detail-label">Datum</Label>
+					<Label text="{date}" class="event-detail-value"></Label>
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="event-detail-label">Karte</Label>
+					<Label text="{map}" class="event-detail-value"></Label>
+				</TableViewRow>
+				<TableViewRow>
+					<Label class="event-detail-label">Ort</Label>
+					<Label text="{eventCenter}" class="event-detail-value"></Label>
+				</TableViewRow>
+			</TableViewSection>
+			<TableViewSection headerTitle="Aktionen">
+				<TableViewRow onClick="openAnnouncment">
+					<Label class="event-menu-item">Ausschreibung</Label>
+				</TableViewRow>
+				<TableViewRow onClick="openTimetable">
+					<Label class="event-menu-item">Anreise</Label>
+				</TableViewRow>
+				<TableViewRow onClick="openMaps">
+					<Label class="event-menu-item">Karten</Label>
+				</TableViewRow>
+				<!-- 
+				<TableViewRow onClick="openStartlist" visible="false">
+					<Label>Startliste</Label>
+				</TableViewRow>
+				-->
+			</TableViewSection>
+		</TableView>
+	</Window>
+</Alloy>

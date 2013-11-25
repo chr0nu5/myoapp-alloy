@@ -1,9 +1,9 @@
-#appname: myoappAlloy
-#appid: com.monkeytech.myoapp.alloy
-#type: mobile
-#guid: a731a0e1-19ff-41fc-8d2b-41a9ea331ad0
-#version: 1.0
-#publisher: not specified
-#url: not specified
-#image: appicon.png
-#desc: not specified
+#appname:myoappAlloy
+#appid:com.monkeytech.myoapp
+#type:mobile
+#guid:a731a0e1-19ff-41fc-8d2b-41a9ea331ad0
+#version:1.0
+#publisher:yannisgu
+#url:http://
+#image:appicon.png
+#desc:not specified

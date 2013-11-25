@@ -27,7 +27,7 @@ exports.definition = {
 		_.extend(Collection.prototype, {
 			get: function(key) {
 				var item;
-				var items =  Alloy.Collections.config.where({"key": key});
+				var items =  Alloy.Collections.instance("config").where({"key": key});
 				if(items.length > 0) {
 					item =items[0];
 				}
@@ -45,7 +45,7 @@ exports.definition = {
 				var item = this.get(key);
 				item.set("value", value);
 				if(item.isNew()) {
-					Alloy.Collections.config.add(item);
+					Alloy.Collections.instance("config").add(item);
 				}
 				item.save();
 			}

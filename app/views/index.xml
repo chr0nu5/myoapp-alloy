@@ -1,7 +1,24 @@
 <Alloy>
 	 <Collection src="config"/>	
+	 <Collection src="event" />
 
-	<Window class="container">
-		<Label id="lblTest"></Label>
+	<Window backgroundColor="white" title="MyOApp">
+		<NavigationGroup platform="ios,mobileweb" id="navgroup">
+			<Window title="MyOApp">
+				<RightNavButton>
+					<Button onClick="onToggleEditModeClicked">Edit</Button>
+				</RightNavButton>
+				<Require src="eventList" id="eventList" />
+			</Window>
+		</NavigationGroup>
+		<View platform="android"> 
+			<Require src="eventList" id="eventList" />
+		</View>
+		   <Menu id="menu" platform="android">
+
+            <!-- Cannot specify node text.  Use attributes only. -->
+            <MenuItem id="menuItem" title="Edit" onClick="onToggleEditModeClicked" showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM" />
+        </Menu>
+
 	</Window>
 </Alloy>

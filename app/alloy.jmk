@@ -1,0 +1,12 @@
+var fs = require('fs');
+
+
+task("pre:compile", function(event,logger) {
+});
+
+task("post:compile",function(event,logger){
+	fs.createReadStream(event.dir.project + '/app/oevents.js').pipe(fs.createWriteStream(event.dir.resources + '/oevents.js'));
+	fs.createReadStream(event.dir.project + '/app/Services.js').pipe(fs.createWriteStream(event.dir.resources + '/Services.js'));
+	
+	logger.info(event.dir.resources)
+});

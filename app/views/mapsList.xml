@@ -1,0 +1,6 @@
+<Alloy>
+	<Window>
+		<Label id="label">Karten laden...</Label>
+		<TableView id="mapsTable" visible="false"></TableView>
+	</Window>
+</Alloy>

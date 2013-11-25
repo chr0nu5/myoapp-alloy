@@ -1,0 +1,17 @@
+android/ATTR_MINIFY=true
+android/ATTR_PROJECT_NAME=myoappAlloy
+android/abi=armeabi
+android/distribute_path=/Users/yannisgu/Dropbox/Yannis/Projects/MyOApp
+android/keystore_alias=myoapp
+android/keystore_password=myoapp
+android/keystore_path=/Users/yannisgu/Dropbox/Yannis/Projects/MyOApp/keys
+android/recent_output=/Users/yannisgu/Dropbox/Yannis/Projects/MyOApp
+android/sdk_version=Android 2.2
+eclipse.preferences.version=1
+iosLaunchConfigurationAttributes/ATTR_MINIFY=true
+iosLaunchConfigurationAttributes/ATTR_PROJECT_NAME=myoappAlloy
+iosLaunchConfigurationAttributes/appid=com.monkeytech.myoapp
+iosLaunchConfigurationAttributes/certificate=Yannis Guedel (9RT64LH5HS)
+iosLaunchConfigurationAttributes/keychain=
+iosLaunchConfigurationAttributes/sdk_version=7.0
+iosLaunchConfigurationAttributes/uuid=AF827F51-E266-4CF9-9DA9-14F98C64E652

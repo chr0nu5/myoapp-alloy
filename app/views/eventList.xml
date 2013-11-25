@@ -1,0 +1,7 @@
+<Alloy>
+	<TableView id="events" onClick="openEventDetail">
+		<!--<Require src="eventRow" id="eventRow" />-->
+	</TableView>
+	  
+
+</Alloy>

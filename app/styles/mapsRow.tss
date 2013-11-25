@@ -1,0 +1,21 @@
+".map-thumbnail": {
+		height: '48dip',
+		width: "143dip",
+		left: 0,
+		top: 0,
+},
+".map-name": {
+		font: {fontWeight: 'bold', fontSize: "16dip"},
+		height: "48dip",
+		width: Ti.UI.FILL,
+		color: 'black',
+		left: '70dip',
+		backgroundColor: 'white'
+},
+".map-spacer": {
+	height: "48dip",
+	width: "10dip",
+	backgroundColor: "white",
+	left: "60dip",
+	zIndex: 100
+}

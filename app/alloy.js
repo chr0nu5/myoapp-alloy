@@ -9,3 +9,6 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+Alloy.Globals.App = {};
+Alloy._.extend(Alloy.Globals.App, Alloy.Backbone.Events);

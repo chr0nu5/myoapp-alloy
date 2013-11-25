@@ -1,6 +1,7 @@
 {
 	"global": {
-		"oeventsUrl": "http://www.guedels.ch/yannis/mysql2json/myoapp.php?table=competitions&last_update={last_update}&query={query}"
+		"oeventsUrl": "http://oevents.aws.af.cm/events?{query}",
+		"mapsUrl": "http://www.guedels.ch/yannis/mobile/myoapp/php/maps.php?search={forest}"
 	}, 
 	"env:development": {}, 
 	"env:test": {}, 

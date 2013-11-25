@@ -1,0 +1,22 @@
+".event-detail-label": {
+		width: '60dip',
+		left: 0,
+		color: '#4775D1',
+		font: {fontSize: "14dip", fontWeight: 'bold'},
+		textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT
+},
+".event-detail-value": {
+	font: {fontWeight: 'bold', fontSize: "16dip"},
+	height: Titanium.UI.SIZE,
+	width: Ti.UI.FILL,
+	color: 'black',
+	left: '70dip'
+},
+
+".event-menu-item": {
+	color: 'black',
+	width: Ti.UI.FILL,
+	font: {fontWeight: 'bold', fontSize: "16dip"},
+	height: Titanium.UI.SIZE,
+	left: '5dip'
+}

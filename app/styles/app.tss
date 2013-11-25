@@ -1,0 +1,11 @@
+"TableViewRow": {
+	font: {fontWeight: 'bold', fontSize: 16},
+	height: '48dip',
+	color: 'black'
+},
+"Window": {
+	backgroundColor: "white",
+	exitOnClose: false,
+	navBarHidden: false,
+	title: "MyOApp"
+}
