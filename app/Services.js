@@ -6,7 +6,7 @@ Services.getJson = function(url, callback, errorCallback)
 			callback(JSON.parse(content));
 		},
 		errorCallback);
-}
+};
 
 Services.getHttp = function(url, callback, errorCallback)
 {

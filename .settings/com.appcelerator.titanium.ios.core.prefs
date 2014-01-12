@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+iosLaunchConfigurationAttributes/ATTR_MINIFY=true
+iosLaunchConfigurationAttributes/ATTR_PROJECT_NAME=myoappAlloy
+iosLaunchConfigurationAttributes/appid=com.monkeytech.myoapp
+iosLaunchConfigurationAttributes/certificate=Yannis Guedel (9RT64LH5HS)
+iosLaunchConfigurationAttributes/keychain=
+iosLaunchConfigurationAttributes/sdk_version=7.0.3
+iosLaunchConfigurationAttributes/uuid=AF827F51-E266-4CF9-9DA9-14F98C64E652
+provisioning_profiles/distribution/AF827F51-E266-4CF9-9DA9-14F98C64E652/appid=com.monkeytech.myoapp
+provisioning_profiles/distribution/AF827F51-E266-4CF9-9DA9-14F98C64E652/name=MyOApp
+provisioning_profiles/distribution/AF827F51-E266-4CF9-9DA9-14F98C64E652/uuid=AF827F51-E266-4CF9-9DA9-14F98C64E652

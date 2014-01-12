@@ -16,6 +16,8 @@ exports.definition = {
 			"night": "boolean",
 			"eventCenter": "varchar",
 			"enabled": "boolean",
+			"urlStartlist": "varchar",
+			"urlResults": "varchar",
 			
 		},
 		"defaults":{
@@ -46,7 +48,6 @@ exports.definition = {
 				if(possibleItems.length > 0) {
 					item = possibleItems[0];
 					item.set(data);
-					console.log(item.get('date'));
 				}
 				else {
 					item = Alloy.createModel("event", data);

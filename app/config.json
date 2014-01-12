@@ -1,7 +1,7 @@
 {
 	"global": {
 		"oeventsUrl": "http://oevents.aws.af.cm/events?{query}",
-		"mapsUrl": "http://www.guedels.ch/yannis/mobile/myoapp/php/maps.php?search={forest}"
+		"mapsUrl": "http://worldofo.com/m/findomaps.php?type=search&search=opfikon&search={forest}"
 	}, 
 	"env:development": {}, 
 	"env:test": {}, 

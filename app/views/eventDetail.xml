@@ -19,7 +19,7 @@
 					<Label text="{eventCenter}" class="event-detail-value"></Label>
 				</TableViewRow>
 			</TableViewSection>
-			<TableViewSection headerTitle="Aktionen">
+			<TableViewSection headerTitle="Aktionen" id="sectionActions">
 				<TableViewRow onClick="openAnnouncment">
 					<Label class="event-menu-item">Ausschreibung</Label>
 				</TableViewRow>
@@ -29,11 +29,16 @@
 				<TableViewRow onClick="openMaps">
 					<Label class="event-menu-item">Karten</Label>
 				</TableViewRow>
-				<!-- 
-				<TableViewRow onClick="openStartlist" visible="false">
-					<Label>Startliste</Label>
+				
+				<TableViewRow onClick="openStartlist" id="startlistRow">
+                    <Label class="event-menu-item">Startliste</Label>
 				</TableViewRow>
-				-->
+
+                <TableViewRow onClick="openResults" id="resultsRow">
+                    <Label class="event-menu-item">Startliste</Label>
+                </TableViewRow>
+
+
 			</TableViewSection>
 		</TableView>
 	</Window>

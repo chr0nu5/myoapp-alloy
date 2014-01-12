@@ -9,7 +9,6 @@ Alloy.Collections.event.comparator = function(entry1, entry2) {
 	return entry1.get('date') < entry2.get('date') ? -1 : 1;
 }
 
-
 $.index.open();
 var ovents = require("/oevents");
 ovents.load(function() {
@@ -30,7 +29,7 @@ $.eventList.on("openEvent", function(e){
 	var win = controller.getView();
 	
 	if (OS_IOS && Alloy.isHandheld) {
-		Alloy.Globals.navgroup.open(win);	
+		$.index.openWindow(win);	
 	} else if (OS_ANDROID) {
 		win.open();
 	}
@@ -41,7 +40,7 @@ Alloy.Globals.App.on("openMapsList", function(e) {
 	var win = controller.getView();
 	
 	if (OS_IOS && Alloy.isHandheld) {
-		Alloy.Globals.navgroup.open(win);	
+		$.index.openWindow(win);	
 	} else if (OS_ANDROID) {
 		win.open();
 	}

@@ -1,17 +1,17 @@
 <Alloy>
 	 <Collection src="config"/>	
 	 <Collection src="event" />
-
-	<Window backgroundColor="white" title="MyOApp">
-		<NavigationGroup platform="ios,mobileweb" id="navgroup">
+		<NavigationWindow  platform="ios,mobileweb" id="index">
 			<Window title="MyOApp">
 				<RightNavButton>
 					<Button onClick="onToggleEditModeClicked">Edit</Button>
 				</RightNavButton>
 				<Require src="eventList" id="eventList" />
 			</Window>
-		</NavigationGroup>
-		<View platform="android"> 
+		</NavigationWindow>
+
+	<Window backgroundColor="white" title="MyOApp" platform="android" id="index">
+		<View > 
 			<Require src="eventList" id="eventList" />
 		</View>
 		   <Menu id="menu" platform="android">
