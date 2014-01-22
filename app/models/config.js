@@ -29,9 +29,11 @@ exports.definition = {
 				var item;
 				var items =  Alloy.Collections.instance("config").where({"key": key});
 				if(items.length > 0) {
+					console.log("found key " + key)
 					item =items[0];
 				}
 				else {
+					console.log("new key "+ key);
 					item = Alloy.createModel("config", {key: key});
 				}
 				return item;
@@ -45,8 +47,10 @@ exports.definition = {
 				var item = this.get(key);
 				item.set("value", value);
 				if(item.isNew()) {
+					console.log("is new")
 					Alloy.Collections.instance("config").add(item);
 				}
+				console.log("save " + key)
 				item.save();
 			}
 			

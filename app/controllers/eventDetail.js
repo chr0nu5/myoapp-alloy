@@ -33,7 +33,7 @@ function openStartlist() {
     Ti.Platform.openURL($.model.get("urlStartlist").replace("kind=all", ""));
 }
 function openResults() {
-    Ti.Platform.openURL($.model.get("urlResults"));
+    Ti.Platform.openURL($.model.get("urlResults").replace("kind=all", ""));
 }
 
 $.model = $model;

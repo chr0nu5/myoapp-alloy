@@ -19,8 +19,7 @@ ovents.load(function() {
 $.eventList.on("openEvent", function(e){
 	var model = Alloy.Collections.event.get(e.row.modelId);
 	var transform = model.toJSON();
-	
-	transform.date = Services.getDateString(new Date(model.get("date")));
+	transform.date = Services.getDateString(new Date(parseInt(model.get("date"))));
 	
 	model.__transform = transform;
 	var controller = Alloy.createController("eventDetail", {

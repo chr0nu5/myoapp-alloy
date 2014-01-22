@@ -1,6 +1,6 @@
 android/ATTR_MINIFY=true
 android/ATTR_PROJECT_NAME=myoappAlloy
-android/abi=armeabi
+android/abi=x86
 android/distribute_path=
 android/keystore_alias=
 android/keystore_password=

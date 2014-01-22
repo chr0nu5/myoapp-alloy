@@ -2,9 +2,10 @@ var Services = require("/Services");
 
 function doTransform(model) {
 	var transform = model.toJSON();
-	
+	console.log(transform.date);
+    console.log(Math.floor(transform.date));
 	transform.row2 = Services.combine(transform.region, transform.organiser);
-	transform.row3 = Services.combine(transform.map, Services.getDateString(new Date(transform.date)));
+	transform.row3 = Services.combine(transform.map, Services.getDateString(new Date(Math.floor(transform.date))));
 	
 	return transform;
 }

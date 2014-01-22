@@ -6,9 +6,9 @@
     <property name="acs-oauth-secret-development" type="string">4wBBa7zQZPOQgFOCoiA0khE0ajiixseA</property>
     <property name="acs-oauth-key-development" type="string">V63yMmADMfdUZBmSSFXhRs5dHmMR7dwd</property>
     <property name="acs-api-key-development" type="string">9VBrcF4FbTTc7toXxuMBMmHg1OFVPtxg</property>
-    <id>com.monkeytech.myoapp</id>
+    <id>com.monkeytech.myoapp.android</id>
     <name>MyOApp</name>
-    <version>1.0.1</version>
+    <version>1.2.0</version>
     <publisher>yannisgu</publisher>
     <url>http://</url>
     <description>not specified</description>
@@ -35,7 +35,7 @@
         </orientations>
     </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:versionCode="100" android:versionName="1.0.0" package="com.monkeytech.myoapp.android"/>
+        <manifest android:versionCode="120" android:versionName="1.2.0" package="com.monkeytech.myoapp.android"/>
     </android>
     <mobileweb>
         <precache/>

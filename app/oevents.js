@@ -6,13 +6,23 @@ var oevents = {
 		console.log("huhu");
 		var today = new Date();
 		var lastUpdate = ""//Info.getInfo("eventsLastUpdate");
-		var minDate = today.getTime() - (60*1000*60*60*24);
-		var maxDate = today.getTime() + (60*1000*60*60*24);
+		//var minDate = today.getTime() - (60*1000*60*60*24);
+		//var maxDate = today.getTime() + (60*1000*60*60*24);
 		
-		var query = {date: {"$gt": minDate, "$lt": maxDate}};
-		query.lastModification = {"$gt": 0}
+		var config = Alloy.Collections.instance("config");
+		config.fetch({success: function() {
+		var lastModification = config.getValue("eventsLastUpdate");
+		if(!lastModification) {
+			lastModification = 0;
+		}
+		lastModification = 0;
+		console.log(lastModification)
+		//var query = {date: {"$gt": minDate, "$lt": maxDate}};
+		var query = {};
+		query.lastModification = {"$gt": lastModification}
 		var url = Alloy.CFG.oeventsUrl.replace("{query}", JSON.stringify(query));  
 		Services.getJson(url, function(result){
+			console.log(result.length)
 				var events = Alloy.Collections.instance("event");
 				events.fetch({
 					
@@ -26,6 +36,7 @@ var oevents = {
 								var eventModel = events.getByData(item);
 								eventModel.save();
 								}
+								config.setValue("eventsLastUpdate", (new Date().getTime()));
 							//Info.setInfo("eventsLastUpdate", (new Date()).getFullYear() + "-" + ((new Date()).getMonth() + 1) + "-" + (new Date()).getDate() + " " + (new Date()).getHours() + ":" +(new Date()).getMinutes())
 							if(callback != undefined) {
 								
@@ -47,6 +58,7 @@ var oevents = {
 				callback();
 			}
 		});
+		}});
 	}
 };
 

@@ -35,7 +35,7 @@
 				</TableViewRow>
 
                 <TableViewRow onClick="openResults" id="resultsRow">
-                    <Label class="event-menu-item">Startliste</Label>
+                    <Label class="event-menu-item">Rangliste</Label>
                 </TableViewRow>
 
 
