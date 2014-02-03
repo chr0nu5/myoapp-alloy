@@ -15,7 +15,6 @@ var oevents = {
 		if(!lastModification) {
 			lastModification = 0;
 		}
-		lastModification = 0;
 		console.log(lastModification)
 		//var query = {date: {"$gt": minDate, "$lt": maxDate}};
 		var query = {};

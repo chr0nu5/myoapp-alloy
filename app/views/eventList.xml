@@ -1,7 +1,20 @@
 <Alloy>
-	<TableView id="events" onClick="openEventDetail">
-		<!--<Require src="eventRow" id="eventRow" />-->
-	</TableView>
+	<ListView id="events" onItemclick="openEventDetail">
+		 <Templates>
+
+                <!-- Define your item templates within the Templates tags or use the
+                     Require tag to include a view that only contains an ItemTemplate -->
+
+                <ItemTemplate name="template" class="event-row">
+					<Switch bindId="switch" id="enableSwitch" value="true" class="event-selectbox"  onClick="onEnabledClicked" onChange="onEnabledChanged" />
+					<Label bindId="name" class="event-row-name" />
+					<Label bindId="row2" class="event-row-2" />
+					<Label bindId="row3" class="event-row-3" /> 
+                </ItemTemplate>
+
+            </Templates>
+	        <ListSection ></ListSection>
+	</ListView>
 	  
 
 </Alloy>

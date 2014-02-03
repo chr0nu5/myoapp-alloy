@@ -1,8 +1,4 @@
 <Alloy>
 	<TableViewRow class="event-row">
-		<Switch id="enableSwitch" value="true" class="event-selectbox"  onClick="onEnabledClicked" onChange="onEnabledChanged" />
-		<Label text="{name}" class="event-row-name" />
-		<Label text="{row2}" class="event-row-2" />
-		<Label text="{row3}" class="event-row-3" /> 
 	</TableViewRow> 
 </Alloy>

@@ -8,7 +8,7 @@
     <property name="acs-api-key-development" type="string">9VBrcF4FbTTc7toXxuMBMmHg1OFVPtxg</property>
     <id>com.monkeytech.myoapp.android</id>
     <name>MyOApp</name>
-    <version>1.2.0</version>
+    <version>1.2.2</version>
     <publisher>yannisgu</publisher>
     <url>http://</url>
     <description>not specified</description>
@@ -19,7 +19,7 @@
     <statusbar-style>default</statusbar-style>
     <statusbar-hidden>false</statusbar-hidden>
     <fullscreen>false</fullscreen>
-    <navbar-hidden>false</navbar-hidden>
+    <navbar-hidden>true</navbar-hidden>
     <analytics>true</analytics>
     <guid>a731a0e1-19ff-41fc-8d2b-41a9ea331ad0</guid>
     <property name="ti.ui.defaultunit" type="string">system</property>
@@ -35,7 +35,10 @@
         </orientations>
     </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:versionCode="120" android:versionName="1.2.0" package="com.monkeytech.myoapp.android"/>
+        <tool-api-level>14</tool-api-level>
+        <manifest android:versionCode="122" android:versionName="1.2.2" package="com.monkeytech.myoapp.android">
+            <application android:theme="@style/LightTheme"/>
+        </manifest>
     </android>
     <mobileweb>
         <precache/>

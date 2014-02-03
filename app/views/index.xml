@@ -10,7 +10,7 @@
 			</Window>
 		</NavigationWindow>
 
-	<Window backgroundColor="white" title="MyOApp" platform="android" id="index">
+	<Window backgroundColor="white" title="MyOApp" platform="android" id="index" navBarHidden="false">
 		<View > 
 			<Require src="eventList" id="eventList" />
 		</View>
@@ -21,4 +21,5 @@
         </Menu>
 
 	</Window>
+    <ActivityIndicator id="activityIndicator" message="Loading..."/>
 </Alloy>

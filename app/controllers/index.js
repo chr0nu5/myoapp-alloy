@@ -9,17 +9,20 @@ Alloy.Collections.event.comparator = function(entry1, entry2) {
 	return entry1.get('date') < entry2.get('date') ? -1 : 1;
 }
 
+$.activityIndicator.show();
 $.index.open();
 var ovents = require("/oevents");
 ovents.load(function() {
 	$.eventList.loadData({editMode: editMode});	
+  	$.activityIndicator.hide();
 });
 
 
-$.eventList.on("openEvent", function(e){
-	var model = Alloy.Collections.event.get(e.row.modelId);
+$.eventList.on("openEvent", function(id){
+	console.log(id)
+	var model = Alloy.Collections.event.get(id);
 	var transform = model.toJSON();
-	transform.date = Services.getDateString(new Date(parseInt(model.get("date"))));
+	transform.date = Services.getDateString(new Date(Math.floor(model.get("date"))));
 	
 	model.__transform = transform;
 	var controller = Alloy.createController("eventDetail", {
