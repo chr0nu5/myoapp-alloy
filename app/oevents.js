@@ -20,12 +20,8 @@ var oevents = {
 		var query = {};
 		query.lastModification = {"$gt": lastModification}
 		var url = Alloy.CFG.oeventsUrl.replace("{query}", JSON.stringify(query));  
+		var events = Alloy.Collections.instance("event");
 		Services.getJson(url, function(result){
-			console.log(result.length)
-				var events = Alloy.Collections.instance("event");
-				events.fetch({
-					
-					success: function() {
 						try
 						{	
 							for(var i = 0; i < result.length; i++) {
@@ -48,8 +44,6 @@ var oevents = {
 								callback();
 							}
 						}
-					}
-				});
 		}, 
 		function(error) {
 			console.log(error);

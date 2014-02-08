@@ -2,7 +2,6 @@ var Services = require("/Services");
 
 function getBindingData(model, editMode) {
 	var transform = model.toJSON();
-	console.log(editMode);
 	return {
 		row2: {text: Services.combine(transform.region, transform.organiser)},
 		row3: {text: Services.combine(transform.map, Services.getDateString(new Date(Math.floor(transform.date))))},
@@ -12,7 +11,7 @@ function getBindingData(model, editMode) {
    			itemId: model.id
    			
    		},
-		switch: {visible: editMode, value: transform.enabled}
+		switch: {visible: editMode , value: transform.enabled ? true : false}
 		
 	};
 }
@@ -37,6 +36,7 @@ exports.loadData = function(options) {
     editMode = options.editMode;
 	
 	var rows = [];
+	var pastEventsRows = [];
     var models = [];
     if(!options.editMode){
     	models = Alloy.Collections.event.where({enabled: 1});
@@ -44,25 +44,29 @@ exports.loadData = function(options) {
 	else{
 		models = Alloy.Collections.event.models;
 	}
-	console.log(models.length);
+	
+	var firstBinding = $.events.sections[0].getItems() == null || $.events.sections[0].getItems().length == 0;
+	console.log($.events.sections[0].getItems());
 	var scrollRowIndex = 0;
+
     for (var i = 0; i < models.length; i++) {
         var model = models[i];
-        rows.push(getBindingData(model, options.editMode));
-        /*var row = Alloy.createController("eventRow", {
-            id: "eventRow",
-            $model: model,
-            editMode: options.editMode
-        });
-        row.model = model;
-        rows.push(row.getView());*/
         
-		if(scrollRowIndex == 0 && model.get("date")  >= options.scrollDate.getTime() - (1000*60*60*24)) {
+    	rows.push(getBindingData(model, options.editMode));
+		if(scrollRowIndex == 0 && Math.floor(model.get("date"))  >= options.scrollDate.getTime() - (1000*60*60*24)) {
 			scrollRowIndex = i;
 		}
     }
     $.events.sections[0].setItems(rows);
-	$.events.scrollToItem(0, scrollRowIndex, {animated: false, position: Ti.UI.iPhone.TableViewScrollPosition.TOP});
+    
+    
+    if(firstBinding && rows.length > 0) {
+   		var animation = {animated: false}; 
+		if(OS_IOS) {
+			animation = {animated: false, position: Ti.UI.iPhone.TableViewScrollPosition.TOP};
+		}
+		$.events.selectItem(0, scrollRowIndex);//, animation);
+	 }
 };
 
 

@@ -8,7 +8,7 @@
     <property name="acs-api-key-development" type="string">9VBrcF4FbTTc7toXxuMBMmHg1OFVPtxg</property>
     <id>com.monkeytech.myoapp.android</id>
     <name>MyOApp</name>
-    <version>1.2.2</version>
+    <version>1.2.3</version>
     <publisher>yannisgu</publisher>
     <url>http://</url>
     <description>not specified</description>

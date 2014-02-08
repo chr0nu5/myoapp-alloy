@@ -1,6 +1,6 @@
 var Services = require("/Services");
 var editMode = false;
-if (OS_IOS && Alloy.isHandheld) {
+if (OS_IOS) {
 	Alloy.Globals.navgroup = $.navgroup;	
 }
 
@@ -9,12 +9,19 @@ Alloy.Collections.event.comparator = function(entry1, entry2) {
 	return entry1.get('date') < entry2.get('date') ? -1 : 1;
 }
 
-$.activityIndicator.show();
 $.index.open();
 var ovents = require("/oevents");
-ovents.load(function() {
-	$.eventList.loadData({editMode: editMode});	
-  	$.activityIndicator.hide();
+
+var events = Alloy.Collections.instance("event");
+events.fetch({
+	success: function() {
+					
+		ovents.load(function() {
+			$.eventList.loadData({editMode: editMode});	
+		});
+		
+		$.eventList.loadData({editMode: editMode});	
+	}
 });
 
 
@@ -30,7 +37,7 @@ $.eventList.on("openEvent", function(id){
 	});
 	var win = controller.getView();
 	
-	if (OS_IOS && Alloy.isHandheld) {
+	if (OS_IOS) {
 		$.index.openWindow(win);	
 	} else if (OS_ANDROID) {
 		win.open();
@@ -41,7 +48,7 @@ Alloy.Globals.App.on("openMapsList", function(e) {
 	var controller = Alloy.createController("mapsList", e);
 	var win = controller.getView();
 	
-	if (OS_IOS && Alloy.isHandheld) {
+	if (OS_IOS) {
 		$.index.openWindow(win);	
 	} else if (OS_ANDROID) {
 		win.open();
